@@ -4,12 +4,19 @@ class data
 {
 	string name;
 	int roll_no;
+	static int count;
 public:
+	data();
+	{
+		cout << "\nData entry no. -" << ++count;
+	}
 	void dat_entry();
 	void display();
 };
+int data::count = 0;
 void data::dat_entry()
 {
+	cout<<"____Data Entries____";
 	cout << "\nEnter your namr - ";
 	cin >> name;
 	cout << "\nEnter your roll no. - ";
